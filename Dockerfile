@@ -49,7 +49,7 @@ RUN yum install -y --enablerepo=crb \
   patch \
   && yum -y clean all
 
-RUN yum -y --enablerepo=powertools install boost-static; yum -y clean all
+RUN yum -y --enablerepo=crb install boost-static; yum -y clean all
 
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
